@@ -1,29 +1,24 @@
-import "./styles.css";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Landing from "./screens/Landing";
-import Home from "./screens/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Cats from "./services/Cat_API";
+import Dogs from "./services/Dog_API";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={Footer} />
-          <Route path="/shop" exact component={Landing} />
+          <Route path="/" exact component={Landing} />
+          <Route path="/dogs" exact component={Dogs} />
+          <Route path="/cats" exact component={Cats} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
 }
-
-const Home = () => {
-  return (
-    <div>
-      <h1>Hi</h1>
-    </div>
-  );
-};
