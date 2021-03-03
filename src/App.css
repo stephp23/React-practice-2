@@ -2,6 +2,7 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+  background-image: url("paper.gif");
 }
 
 .content {
@@ -100,3 +101,5 @@ nav ul a {
 	text-decoration: none;
 	color: white;
 }
+
+
