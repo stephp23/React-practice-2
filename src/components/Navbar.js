@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <h3>Logo</h3>
+      <h3>Pets App</h3>
       <ul>
         <Link style={navStyle} to="/dogs">
           <li>Dogs</li>
